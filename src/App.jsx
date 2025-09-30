@@ -12,7 +12,7 @@ import TicketPayments from './Pages/TicketPayments'
 import ValidateTicket from './Pages/ValidateTicket'
 import TestQRGenerator from './Pages/TestQRGenerator'
 import QRTestPage from './Pages/QRTestPage'
-import ChatBot from './Pages/chatbot'
+import ChatBot from './Pages/Chatbot'
 
 
 function App() {
