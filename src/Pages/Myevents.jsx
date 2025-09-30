@@ -134,7 +134,7 @@ const Myevents = () => {
 
       await fetchUserEnrollments();
 
-      const response = await fetch('http://167.71.220.214:3000/api/events', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/events', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${accessToken}`,
@@ -189,7 +189,7 @@ const Myevents = () => {
         return [];
       }
 
-      const response = await fetch('http://167.71.220.214:3000/api/enrollments/my', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/enrollments/my', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -256,7 +256,7 @@ const Myevents = () => {
 
       for (const eventId of eventIds) {
         try {
-          const response = await fetch(`http://167.71.220.214:3000/api/enrollments/event/${eventId}`, {
+          const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/enrollments/event/${eventId}`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json',
@@ -385,7 +385,7 @@ const Myevents = () => {
         return;
       }
 
-      const endpoint = `http://167.71.220.214:3000/api/enrollments/event/${eventId}`;
+      const endpoint = `https://68db8cfe8479370008390390--simplytix.netlify.app/api/enrollments/event/${eventId}`;
       const method = actuallyEnrolled ? 'DELETE' : 'POST';
 
       const response = await fetch(endpoint, {
@@ -459,7 +459,7 @@ const Myevents = () => {
         return;
       }
 
-      const eventResponse = await fetch(`http://167.71.220.214:3000/api/events/${event._id || event.id}`, {
+      const eventResponse = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/events/${event._id || event.id}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -498,7 +498,7 @@ const Myevents = () => {
         }
       }
 
-      const response = await fetch(`http://167.71.220.214:3000/api/events/${event._id || event.id}`, {
+      const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/events/${event._id || event.id}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -547,7 +547,7 @@ const Myevents = () => {
         return;
       }
 
-      const eventResponse = await fetch(`http://167.71.220.214:3000/api/events/${event._id || event.id}`, {
+      const eventResponse = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/events/${event._id || event.id}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -814,7 +814,7 @@ const Myevents = () => {
                       type: 'info'
                     };
 
-                    const response = await fetch(`http://167.71.220.214:3000/api/events/${eventId}/notifications`, {
+                    const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/events/${eventId}/notifications`, {
                       method: 'POST',
                       headers: {
                         'Content-Type': 'application/json',
@@ -822,7 +822,7 @@ const Myevents = () => {
                       },
                       body: JSON.stringify(notificationData)
                     });
-                    const response_sms = await fetch(`http://167.71.220.214:3000/api/sms/event/updates`, {
+                    const response_sms = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/sms/event/updates`, {
                       method: 'POST',
                       headers: {
                         'Content-Type': 'application/json',

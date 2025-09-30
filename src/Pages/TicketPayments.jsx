@@ -197,7 +197,7 @@ const TicketPayments = ({ setUserPoints }) => {
         setLoading(false);
         return;
       }
-      const response = await fetch('http://167.71.220.214:3000/api/payments/points', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/payments/points', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

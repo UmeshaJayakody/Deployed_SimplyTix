@@ -39,7 +39,7 @@ const About = () => {
       };
 
       // Fetch events with authentication
-      const eventsResponse = await fetch("http://167.71.220.214:3000/api/events", {
+      const eventsResponse = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/events", {
         method: "GET",
         headers: headers,
       });
@@ -52,7 +52,7 @@ const About = () => {
       }
 
       // Fetch tickets with authentication
-      const ticketsResponse = await fetch("http://167.71.220.214:3000/api/tickets", {
+      const ticketsResponse = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/tickets", {
         method: "GET",
         headers: headers,
       });

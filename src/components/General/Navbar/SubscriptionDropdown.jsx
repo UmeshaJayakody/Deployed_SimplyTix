@@ -65,7 +65,7 @@ const SubscriptionDropdown = ({
     try {
       setOtpLoading(true);
       setOtpError('');
-      const response = await fetch('http://167.71.220.214:3000/api/subscription/otp-verify', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/subscription/otp-verify', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -107,7 +107,7 @@ const SubscriptionDropdown = ({
       // First, get the current subscription status from the external API
       const userData = localStorage.getItem('userData');
       const maskedMobile = userData.maskedMobile;
-      const statusResponse = await fetch("http://167.71.220.214:3000/api/subscription/get-status", {
+      const statusResponse = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/subscription/get-status", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -127,7 +127,7 @@ const SubscriptionDropdown = ({
         console.log('Mapped subscription status:', subscriptionStatus);
 
         // Update subscription status in the backend database
-        const updateResponse = await fetch('http://167.71.220.214:3000/api/users/profile/subscription-status', {
+        const updateResponse = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/users/profile/subscription-status', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ const SubscriptionDropdown = ({
   const requestOTPVerify = async () => {
     try {
       console.log('Requesting OTP for phone number:', userData.mobileNumber);
-      const response = await fetch('http://167.71.220.214:3000/api/subscription/otp-request', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/subscription/otp-request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -193,7 +193,7 @@ const SubscriptionDropdown = ({
       const userData = localStorage.getItem('userData') ? JSON.parse(localStorage.getItem('userData')) : {};
       const maskedMobile = userData.maskedMobile;
 
-      const response = await fetch('http://167.71.220.214:3000/api/subscription/unsubscribe', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/subscription/unsubscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

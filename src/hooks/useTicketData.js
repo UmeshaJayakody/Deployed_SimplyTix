@@ -31,7 +31,7 @@ const useTicketData = () => {
         return;
       }
 
-      const response = await fetch("http://167.71.220.214:3000/api/tickets/my", {
+      const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/tickets/my", {
         method: "GET",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -165,7 +165,7 @@ const useTicketData = () => {
         return;
       }
       
-      const response = await fetch(`http://167.71.220.214:3000/api/tickets/${ticketId}/cancel`, {
+      const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/tickets/${ticketId}/cancel`, {
         method: "PUT",
         headers: {
           "Authorization": `Bearer ${token}`,

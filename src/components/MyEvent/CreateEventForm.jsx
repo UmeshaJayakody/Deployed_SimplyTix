@@ -182,7 +182,7 @@ const CreateEventForm = ({ isOpen, onClose, onEventCreated, editingEvent=null })
       const formDataForUpload = new FormData();
       formDataForUpload.append('image', file);
 
-      const response = await fetch('http://167.71.220.214:3000/api/upload/image', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/upload/image', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -252,8 +252,8 @@ const CreateEventForm = ({ isOpen, onClose, onEventCreated, editingEvent=null })
       };
 
       const url = editingEvent
-        ? `http://167.71.220.214:3000/api/events/${editingEvent._id || editingEvent.id}`
-        : 'http://167.71.220.214:3000/api/events';
+        ? `https://68db8cfe8479370008390390--simplytix.netlify.app/api/events/${editingEvent._id || editingEvent.id}`
+        : 'https://68db8cfe8479370008390390--simplytix.netlify.app/api/events';
       const method = editingEvent ? 'PUT' : 'POST';
 
       const response = await fetch(url, {

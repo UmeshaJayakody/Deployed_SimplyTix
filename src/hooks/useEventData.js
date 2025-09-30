@@ -30,7 +30,7 @@ const useEventData = () => {
         return;
       }
       
-      const response = await fetch('http://167.71.220.214:3000/api/enrollments/my', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/enrollments/my', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -66,14 +66,14 @@ const useEventData = () => {
           headers['Authorization'] = `Bearer ${token}`;
         }
         
-        const response = await fetch('http://167.71.220.214:3000/api/events', {
+        const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/events', {
           method: 'GET',
           headers
         });
         
         if (!response.ok) {
           if (response.status === 401 && token) {
-            const publicResponse = await fetch('http://167.71.220.214:3000/api/events', {
+            const publicResponse = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/events', {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json',
@@ -138,7 +138,7 @@ const useEventData = () => {
         return;
       }
       
-      const endpoint = `http://167.71.220.214:3000/api/enrollments/event/${eventId}`;
+      const endpoint = `https://68db8cfe8479370008390390--simplytix.netlify.app/api/enrollments/event/${eventId}`;
       const method = actuallyEnrolled ? 'DELETE' : 'POST';
       
       const response = await fetch(endpoint, {

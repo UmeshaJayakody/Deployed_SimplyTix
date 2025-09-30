@@ -55,7 +55,7 @@ const Navbar = ({ username, onLogout }) => {
         handleLogout();
         return;
       }
-      const response = await fetch("http://167.71.220.214:3000/api/notifications/my", {
+      const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/notifications/my", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -88,7 +88,7 @@ const Navbar = ({ username, onLogout }) => {
         }
         return;
       }
-      const response = await fetch(`http://167.71.220.214:3000/api/notifications/${notificationId}/read`, {
+      const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/notifications/${notificationId}/read`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -126,7 +126,7 @@ const Navbar = ({ username, onLogout }) => {
         }
         return;
       }
-      const response = await fetch("http://167.71.220.214:3000/api/users/profile", {
+      const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/users/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -185,7 +185,7 @@ const Navbar = ({ username, onLogout }) => {
         }
         return;
       }
-      const response = await fetch("http://167.71.220.214:3000/api/users/profile", {
+      const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/users/profile", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

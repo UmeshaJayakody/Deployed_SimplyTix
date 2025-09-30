@@ -52,7 +52,7 @@ const Login = () => {
       setErrors({});
       console.log('Attempting login with:', { email, password: '***' });
 
-      const response = await fetch('http://167.71.220.214:3000/api/users/login', {
+      const response = await fetch('https://68db8cfe8479370008390390--simplytix.netlify.app/api/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -81,7 +81,7 @@ const Login = () => {
         // Fetch subscription status and update it in the backend
         try {
            const maskedMobile = data.user.maskedMobile;
-          const statusResponse = await fetch("http://167.71.220.214:3000/api/subscription/get-status", {
+          const statusResponse = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/subscription/get-status", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

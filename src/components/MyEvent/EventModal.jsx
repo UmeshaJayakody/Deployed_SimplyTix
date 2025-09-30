@@ -37,7 +37,7 @@ const EventModal = ({ event, onClose, onEnroll, enrolling, currentUserId }) => {
         }
 
         const eventId = event._id || event.id;
-        const response = await fetch(`http://167.71.220.214:3000/api/enrollments/event/${eventId}`, {
+        const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/enrollments/event/${eventId}`, {
           method: 'GET',
           headers
         });

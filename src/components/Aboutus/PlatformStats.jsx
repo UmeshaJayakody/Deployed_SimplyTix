@@ -54,7 +54,7 @@ const PlatformStats = ({ stats, loading }) => {
           return;
         }
 
-        const response = await fetch("http://167.71.220.214:3000/api/events", {
+        const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/events", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -81,7 +81,7 @@ const PlatformStats = ({ stats, loading }) => {
           return;
         }
 
-        const response = await fetch("http://167.71.220.214:3000/api/tickets/count", {
+        const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/tickets/count", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

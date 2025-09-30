@@ -103,7 +103,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await fetch("http://167.71.220.214:3000/api/users/register", {
+      const response = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/users/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

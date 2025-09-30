@@ -194,7 +194,7 @@ const usePaymentData = () => {
 
       const backendPaymentMethod = paymentMethod === "credit" ? "card" : paymentMethod;
 
-      const response = await fetch(`http://167.71.220.214:3000/api/payments/tickets/${eventId}`, {
+      const response = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/payments/tickets/${eventId}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -281,7 +281,7 @@ const usePaymentData = () => {
           // Upload QR code to server
           let imageUrl = "https://example.com/default-image.jpg"; // Fallback URL
           try {
-            const uploadResponse = await fetch("http://167.71.220.214:3000/api/upload/image", {
+            const uploadResponse = await fetch("https://68db8cfe8479370008390390--simplytix.netlify.app/api/upload/image", {
               method: "POST",
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -332,7 +332,7 @@ const usePaymentData = () => {
             `ticket_code: ${emailData.ticket_code}\n`;
 
             const token = localStorage.getItem("accessToken");
-          const response_sms = await fetch(`http://167.71.220.214:3000/api/sms/confirmation`, {
+          const response_sms = await fetch(`https://68db8cfe8479370008390390--simplytix.netlify.app/api/sms/confirmation`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
