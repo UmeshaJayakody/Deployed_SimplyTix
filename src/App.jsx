@@ -8,11 +8,11 @@ import Contactus from './Pages/Contactus'
 import Payment from './Pages/Payment' 
 import MyTickets from './Pages/MyTickets'
 import Myevents from './Pages/Myevents'
-import TicketPayments from './Pages/ticketpayments'
+import TicketPayments from './Pages/TicketPayments'
 import ValidateTicket from './Pages/ValidateTicket'
 import TestQRGenerator from './Pages/TestQRGenerator'
 import QRTestPage from './Pages/QRTestPage'
-import ChatBot from './Pages/chatbot'
+import ChatBot from './Pages/Chatbot'
 
 
 function App() {
