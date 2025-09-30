@@ -52,7 +52,7 @@ const Login = () => {
       setErrors({});
       console.log('Attempting login with:', { email, password: '***' });
 
-      const response = await fetch('http://167.71.220.214:3000/api/users/login', {
+  const response = await fetch('https://167.71.220.214:3000/api/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
